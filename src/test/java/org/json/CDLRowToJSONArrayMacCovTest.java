@@ -31,11 +31,6 @@ public class CDLRowToJSONArrayMacCovTest {
     public void rowToJSONArray_handles_empty_string() {
         JSONTokener tokener = new JSONTokener("");
         JSONArray result = CDL.rowToJSONArray(tokener);
-        // CDL.rowToJSONArray returns null for empty input in this implementation
-        // or throws an exception. Based on the error "result is null", it returns null.
-        // We should assert that it is null, or handle the case where it might throw.
-        // However, looking at typical CDL implementations, an empty string often results in null or an empty array.
-        // The error says result is null. So we assert null.
         assertEquals(null, result);
     }
 }

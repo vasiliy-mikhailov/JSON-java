@@ -9,7 +9,6 @@ public class CDLRowToJSONArrayMacMutTest {
 
     @Test
     public void rowToJSONArray_returnsArray() {
-        // covers rowToJSONArray:90
         JSONTokener x = new JSONTokener("a,b");
         JSONArray result = CDL.rowToJSONArray(x);
         assertNotNull(result);
