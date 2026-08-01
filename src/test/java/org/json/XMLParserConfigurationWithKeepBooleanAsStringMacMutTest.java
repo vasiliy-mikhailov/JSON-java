@@ -10,7 +10,6 @@ public class XMLParserConfigurationWithKeepBooleanAsStringMacMutTest {
 
     @Test
     public void withKeepBooleanAsStringReturnsNewInstance() {
-        // covers withKeepBooleanAsString:262
         XMLParserConfiguration original = new XMLParserConfiguration();
         XMLParserConfiguration result = original.withKeepBooleanAsString(true);
         assertNotNull(result);
@@ -19,7 +18,6 @@ public class XMLParserConfigurationWithKeepBooleanAsStringMacMutTest {
 
     @Test
     public void withKeepBooleanAsStringSetsValue() {
-        // covers withKeepBooleanAsString:261
         XMLParserConfiguration original = new XMLParserConfiguration();
         XMLParserConfiguration result = original.withKeepBooleanAsString(true);
         assertEquals(true, result.isKeepBooleanAsString());
