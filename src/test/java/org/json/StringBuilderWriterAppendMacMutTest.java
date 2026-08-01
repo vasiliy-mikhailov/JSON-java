@@ -18,7 +18,6 @@ public class StringBuilderWriterAppendMacMutTest {
 
     @Test
     public void appendCharSequenceReturnsThis() {
-        // covers append:63
         CharSequence csq = "test";
         StringBuilderWriter result = writer.append(csq);
         assertNotNull(result);
@@ -28,7 +27,6 @@ public class StringBuilderWriterAppendMacMutTest {
 
     @Test
     public void appendCharSequenceWithRangeReturnsThis() {
-        // covers append:71
         CharSequence csq = "hello";
         StringBuilderWriter result = writer.append(csq, 0, 3);
         assertNotNull(result);
@@ -38,7 +36,6 @@ public class StringBuilderWriterAppendMacMutTest {
 
     @Test
     public void appendCharReturnsThis() {
-        // covers append:77
         char c = 'x';
         StringBuilderWriter result = writer.append(c);
         assertNotNull(result);
@@ -48,7 +45,6 @@ public class StringBuilderWriterAppendMacMutTest {
 
     @Test
     public void appendNullCharSequenceWritesNull() {
-        // covers append:68
         StringBuilderWriter result = writer.append((CharSequence) null, 0, 4);
         assertNotNull(result);
         assertSame(writer, result);
