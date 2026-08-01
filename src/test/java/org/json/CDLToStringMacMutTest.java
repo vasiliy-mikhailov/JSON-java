@@ -9,7 +9,6 @@ public class CDLToStringMacMutTest {
 
     @Test
     public void toStringWithNullNamesReturnsNull() {
-        // covers toString:429
         JSONArray names = null;
         JSONArray ja = new JSONArray();
         ja.put(new JSONObject());
@@ -19,7 +18,6 @@ public class CDLToStringMacMutTest {
 
     @Test
     public void toStringWithEmptyNamesReturnsNull() {
-        // covers toString:433
         JSONArray names = new JSONArray();
         JSONArray ja = new JSONArray();
         ja.put(new JSONObject());
