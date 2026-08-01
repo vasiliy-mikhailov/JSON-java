@@ -17,7 +17,6 @@ public class StringBuilderWriterWriteMacMutTest {
 
     @Test
     public void writeCharArrayWithZeroLength() {
-        // covers write:41
         char[] chars = {'a', 'b', 'c'};
         writer.write(chars, 0, 0);
         assertEquals("", writer.toString());
@@ -25,7 +24,6 @@ public class StringBuilderWriterWriteMacMutTest {
 
     @Test
     public void writeCharArrayWithInvalidOffset() {
-        // covers write:44
         char[] chars = {'a', 'b', 'c'};
         try {
             writer.write(chars, -1, 1);
