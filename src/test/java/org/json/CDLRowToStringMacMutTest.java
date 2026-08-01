@@ -8,7 +8,6 @@ public class CDLRowToStringMacMutTest {
 
     @Test
     public void rowToString_returnsCommaSeparatedValues() {
-        // covers rowToString:168
         JSONArray ja = new JSONArray();
         ja.put("a");
         ja.put("b");
