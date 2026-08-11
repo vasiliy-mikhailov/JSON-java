@@ -33,8 +33,6 @@ public class JSONMLToJSONArrayMacCovR2Test {
         String xml = "<root attr1='val1' attr2='val2'><child>value</child></root>";
         JSONArray result = JSONML.toJSONArray(xml);
         assertNotNull(result);
-        // When attributes are present, the structure is [tagName, attributesObject, childrenArray]
-        // So length is 3: 0=tagName, 1=attributes, 2=children
         assertEquals(3, result.length());
         assertEquals("root", result.getString(0));
         JSONObject attrs = result.getJSONObject(1);
