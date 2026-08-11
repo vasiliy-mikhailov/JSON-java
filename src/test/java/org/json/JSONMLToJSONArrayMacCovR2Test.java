@@ -2,7 +2,6 @@ package org.json;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -10,7 +9,6 @@ public class JSONMLToJSONArrayMacCovR2Test {
 
     @Test
     public void toJSONArrayStringParsesSimpleElement() {
-        // covers toJSONArray:306
         JSONArray result = JSONML.toJSONArray("<a/>");
         assertNotNull(result);
         assertEquals(1, result.length());
@@ -19,7 +17,6 @@ public class JSONMLToJSONArrayMacCovR2Test {
 
     @Test
     public void toJSONArrayXMLTokenerParsesSimpleElement() {
-        // covers toJSONArray:310
         JSONArray result = JSONML.toJSONArray(new XMLTokener("<b/>"));
         assertNotNull(result);
         assertEquals(1, result.length());
@@ -28,7 +25,6 @@ public class JSONMLToJSONArrayMacCovR2Test {
 
     @Test
     public void toJSONArrayStringParsesElementWithText() {
-        // covers toJSONArray:306
         JSONArray result = JSONML.toJSONArray("<c>text</c>");
         assertNotNull(result);
         assertEquals(2, result.length());
@@ -38,7 +34,6 @@ public class JSONMLToJSONArrayMacCovR2Test {
 
     @Test
     public void toJSONArrayXMLTokenerParsesElementWithText() {
-        // covers toJSONArray:310
         JSONArray result = JSONML.toJSONArray(new XMLTokener("<d>value</d>"));
         assertNotNull(result);
         assertEquals(2, result.length());
