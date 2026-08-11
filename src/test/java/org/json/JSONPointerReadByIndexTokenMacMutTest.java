@@ -9,7 +9,7 @@ public class JSONPointerReadByIndexTokenMacMutTest {
 
     @Test
     public void indexOutOfBoundsThrowsException() {
-        // covers readByIndexToken:229
+        // Verifies out-of-bounds index throws JSONPointerException with correct message
         JSONArray arr = new JSONArray();
         arr.put("a");
         arr.put("b");
@@ -24,7 +24,7 @@ public class JSONPointerReadByIndexTokenMacMutTest {
 
     @Test
     public void validIndexReturnsCorrectValue() {
-        // covers readByIndexToken:229
+        // Verifies valid index returns correct value
         JSONArray arr = new JSONArray();
         arr.put("a");
         arr.put("b");
