@@ -13,19 +13,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberDecimalNotation() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:550
-        // covers stringToNumber:557
-        // covers stringToNumber:560
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies decimal notation parsing returns BigDecimal
         Object result = XML.stringToValue("1.23", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof BigDecimal);
@@ -34,11 +22,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberNegativeZero() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:550
-        // covers stringToNumber:557
-        
+        // Verifies negative zero parsing returns Double
         Object result = XML.stringToValue("-0.0", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Double);
@@ -47,17 +31,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberHexFloat() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:560
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies hex float parsing returns Double
         Object result = XML.stringToValue("0x1.0P-1074", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Double);
@@ -66,16 +40,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberInteger() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies integer parsing returns Integer
         Object result = XML.stringToValue("123", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Integer);
@@ -84,16 +49,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberLong() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies long parsing returns Long
         Object result = XML.stringToValue("1234567890123456789", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Long);
@@ -102,15 +58,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberBigInteger() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:594
-        
+        // Verifies big integer parsing returns BigInteger
         Object result = XML.stringToValue("123456789012345678901234567890", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof BigInteger);
@@ -119,16 +67,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberNegativeInteger() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies negative integer parsing returns Integer
         Object result = XML.stringToValue("-123", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Integer);
@@ -137,16 +76,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberNegativeLong() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:592
-        // covers stringToNumber:594
-        
+        // Verifies negative long parsing returns Long
         Object result = XML.stringToValue("-1234567890123456789", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof Long);
@@ -155,15 +85,7 @@ public class XMLStringToNumberMacMutTest {
 
     @Test
     public void stringToNumberNegativeBigInteger() {
-        // covers stringToNumber:541
-        // covers stringToNumber:549
-        // covers stringToNumber:569
-        // covers stringToNumber:572
-        // covers stringToNumber:575
-        // covers stringToNumber:588
-        // covers stringToNumber:591
-        // covers stringToNumber:594
-        
+        // Verifies negative big integer parsing returns BigInteger
         Object result = XML.stringToValue("-123456789012345678901234567890", new XMLParserConfiguration());
         assertNotNull(result);
         assertTrue(result instanceof BigInteger);
