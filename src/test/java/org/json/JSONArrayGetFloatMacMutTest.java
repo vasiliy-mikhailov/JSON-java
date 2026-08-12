@@ -25,6 +25,7 @@ public class JSONArrayGetFloatMacMutTest {
 
     @Test
     public void getFloatWithInvalidStringThrows() {
+        // verifies exception on invalid string
         JSONArray array = new JSONArray();
         array.put("not a number");
         try {
