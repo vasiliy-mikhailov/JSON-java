@@ -20,8 +20,7 @@ public class JSONWriterAppendMacCovTest {
     }
 
     /**
-     * Pins down the behavior of array() which internally calls append("[").
-     * Covers lines 94, 102, 106, 114.
+     * Verifies array() appends open bracket.
      */
     @Test
     public void testArrayAppendsOpenBracket() {
@@ -30,8 +29,7 @@ public class JSONWriterAppendMacCovTest {
     }
 
     /**
-     * Pins down the behavior of object() which internally calls append("{").
-     * Covers lines 152, 156.
+     * Verifies object() appends open brace.
      */
     @Test
     public void testObjectAppendsOpenBrace() {
@@ -40,36 +38,30 @@ public class JSONWriterAppendMacCovTest {
     }
 
     /**
-     * Pins down the behavior of value(boolean) which internally calls append("true"/"false").
-     * Covers lines 199, 210, 214.
+     * Verifies value(boolean) appends true/false string.
      */
     @Test
     public void testValueBooleanAppendsString() {
-        // Must start with array or object to set mode to 'a' or 'o'
         jsonWriter.array();
         jsonWriter.value(true);
         assertEquals("[true", writer.toString());
     }
 
     /**
-     * Pins down the behavior of value(Object) with null, which internally calls append("null").
-     * Covers lines 252, 256.
+     * Verifies value(null) appends null string.
      */
     @Test
     public void testValueNullAppendsNullString() {
-        // Must start with array or object to set mode to 'a' or 'o'
         jsonWriter.array();
         jsonWriter.value(null);
         assertEquals("[null", writer.toString());
     }
 
     /**
-     * Pins down the error path when append is called out of sequence (mode is not 'o' or 'a').
-     * Covers line 329.
+     * Verifies append throws exception when called out of sequence.
      */
     @Test
     public void testAppendOutOfSequenceThrowsException() {
-        // covers append:329
         try {
             jsonWriter.object();
             jsonWriter.value("test");
